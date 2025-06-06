@@ -35,32 +35,14 @@ limitations under the License.
 
 > Compute `x - nπ/2 = r` (single-precision).
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-rempio2f
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var rempio2f = require( '@stdlib/math-base-special-rempio2f' );
+import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@esm/index.mjs';
 ```
 
 #### rempio2f( x, y )
@@ -117,9 +99,14 @@ y1 = y[ 0 ];
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var linspace = require( '@stdlib/array-base-linspace' );
-var rempio2f = require( '@stdlib/math-base-special-rempio2f' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs';
+import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@esm/index.mjs';
 
 var x = linspace( 0.0, 100.0, 100 );
 var y = [ 0.0 ];
@@ -130,6 +117,10 @@ for ( i = 0; i < x.length; i++ ) {
     n = rempio2f( x[ i ], y );
     console.log( '%d - %dπ/2 = %d', x[ i ], n, y[ 0 ] );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -138,95 +129,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/special/rempio2f.h"
-```
-
-#### stdlib_base_rempio2f( x, &rem )
-
-Computes `x - nπ/2 = r` (single-precision).
-
-```c
-#include <stdint.h>
-
-double rem;
-
-int32_t n = stdlib_base_rempio2f( 4.0f, &rem );
-```
-
-The function accepts the following arguments:
-
--   **x**: `[in] float` input value.
--   **rem**: `[out] double*` destination for the remainder.
-
-```c
-int32_t stdlib_base_rempio2f( const float x, double *rem );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/special/rempio2f.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <inttypes.h>
-
-int main( void ) {
-    const float x[] = { 0.0f, 1.0f, 4.0f, 128.0f };
-
-    double rem;
-    int32_t n;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        n = stdlib_base_rempio2f( x[ i ], &rem );
-        printf( "%f - %"PRId32"π/2 = %lf\n", x[ i ], n, rem );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -245,7 +148,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
