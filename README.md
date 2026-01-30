@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@deno/mod.js';
+import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@v0.1.0-deno/mod.js';
 ```
 
 #### rempio2f( x, y )
@@ -101,7 +101,7 @@ y1 = y[ 0 ];
 
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
-import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@deno/mod.js';
+import rempio2f from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-rempio2f@v0.1.0-deno/mod.js';
 
 var x = linspace( 0.0, 100.0, 100 );
 var y = [ 0.0 ];
